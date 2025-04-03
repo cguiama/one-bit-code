@@ -57,13 +57,36 @@ function exibirMenu() {
   return parseInt(opcao);
 }
 
+function vagaGetIndice() {
+  const indice = parseInt(prompt('Digite o índice da vaga'));
+  if (isNaN(indice) || indice < 0 || indice >= vagas.length) {
+    alert('Índice digitado inválido! Tente novamente.');
+    return;
+  }
+  return indice;
+}
+
+function listarCandidatosNaVaga(indice) {
+  const vaga = vagas[indice];
+
+  const listaCandidatos = vaga.candidatos
+    .map((candidato, posicao) => `${posicao + 1}. ${candidato}`)
+    .join('\n');
+
+  return listaCandidatos || 'Nenhum candidato inscrito.';
+}
+
 //A opção de listar as vagas deve mostrar o índice, o nome e a quantidade de candidatos inscritos de todas as vagas.*/
 function listarVagas() {
-  vagas.forEach((vaga, indice) => {
-    alert(
-      `Indice: ${indice}\nNome: ${vaga.nome}\nCandidatos: ${vaga.candidatos.length}`
-    );
-  });
+  if (vagas.length !== 0) {
+    vagas.forEach((vaga, i) => {
+      alert(
+        `Índice: ${i}\nNome: ${vaga.nome}\nCandidatos: ${vaga.candidatos.length}`
+      );
+    });
+  } else {
+    alert('Não há vagas cadastradas.');
+  }
 }
 
 // A opção de criar uma nova vaga deve pedir um nome para a vaga, uma descrição e uma data limite, e também deve pedir que o usuário confirme as informações antes de salvá-las.
@@ -85,8 +108,44 @@ function criarVaga() {
 }
 
 // A opção de visualizar uma vaga deve pedir o índice da vaga e mostrar todas as informações dela: índice, nome, descrição, data limite, quantidade de candidatos e o nome dos candidatos.
-function visualizarVaga() {}
+function visualizarVaga() {
+  const indice = vagaGetIndice();
+  const vaga = vagas[indice];
+
+  alert(`
+Vaga de indice ${indice}
+    
+Nome: ${vaga.nome}
+Descrição: ${vaga.descricao}
+Data limite: ${vaga.limite}
+Total de Candidatos: ${vaga.candidatos.length}
+
+Candidatos:
+${listarCandidatosNaVaga(indice)}
+`);
+}
 // A opção de inscrever um candidato em uma vaga de pedir o nome do candidato, o índice da vaga e então uma confirmação exibindo as informações da vaga antes de salvar o candidato na vaga.
-function inscreverCandidato() {}
+function inscreverCandidato() {
+  const indice = vagaGetIndice();
+  const vaga = vagas[indice];
+  const candidatoNome = prompt('Qual o nome do candidato?');
+
+  const confirma = confirm(
+    `Você quer inscrever o candidato ${candidatoNome} na vaga ${vaga.nome}?`
+  );
+
+  if (confirma) vaga.candidatos.push(candidatoNome);
+}
 // A opção de excluir uma vaga deve pedir o índice da vaga, mostrar suas informações e pedir que o usuário confirme a exclusão da vaga antes de realmente exclui-la.
-function excluirVaga() {}
+function excluirVaga() {
+  const indice = vagaGetIndice();
+  const vaga = vagas[indice];
+  const confirma = confirm(`Você quer realmente deletar a vaga:
+Nome: ${vaga.nome}
+Descrição: ${vaga.descricao}
+Data Limite: ${vaga.limite}
+Com ${vaga.candidatos.length} candidatos inscritos?
+`);
+
+  if (confirma) vagas.splice(indice, 1);
+}
