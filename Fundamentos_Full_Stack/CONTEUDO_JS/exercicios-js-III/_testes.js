@@ -1,0 +1,2 @@
+function addContact() {}
+function removeContact() {}

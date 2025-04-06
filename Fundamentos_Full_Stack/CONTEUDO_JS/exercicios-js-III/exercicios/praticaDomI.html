@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos no HTML</title>
+    <script src="./praticaDomI.js" defer></script>
+  </head>
+  <body>
+    <h1>Praticando a Manipulação do DOM</h1>
+
+    <button id="meuBotao">Clique aqui</button>
+    <p id="mensagem">Texto original</p>
+
+    <hr />
+
+    <button id="toggleBtn">Mostrar imagem</button>
+    <img
+      id="minhaImagem"
+      src="https://media.licdn.com/dms/image/v2/C5612AQH0i3NzuUeMtQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520083578645?e=2147483647&v=beta&t=6u5x1k7YRgZ31TY7ujV7acPwGIwSjjMwuQIPGIGurns"
+      style="display: none"
+    />
+
+    <hr />
+
+    <input type="text" id="novoItem" placeholder="Digite um item" />
+    <button id="addItem">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <hr />
+
+    <form id="formulario">
+      <input type="text" id="nome" placeholder="Nome" /><br />
+      <input type="email" id="email" placeholder="Email" /><br />
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="mensagemErro" style="color: red"></p>
+  </body>
+</html>
