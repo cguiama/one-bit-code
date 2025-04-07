@@ -48,3 +48,11 @@ formulario.addEventListener('submit', (event) => {
     }
   });
 });
+
+//Alterar cor de fundo
+function mudarCorDeFundo() {
+  const html = document.documentElement;
+
+  html.style.backgroundColor =
+    html.style.backgroundColor !== 'blue' ? 'blue' : 'white';
+}

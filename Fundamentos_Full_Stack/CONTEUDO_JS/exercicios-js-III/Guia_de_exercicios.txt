@@ -1,0 +1,102 @@
+🧭 Trilha de Domínio em Manipulação de DOM (JS Puro)
+
+🟢 Bloco 1: Fundamentos (Fácil)
+Esses são pra você se acostumar a selecionar e alterar elementos.
+
+Mudar texto com clique
+
+Clique no botão → parágrafo muda de texto.
+
+Alterar cor de fundo
+
+Clique em botões com cores diferentes → muda o fundo da página.
+
+Mostrar/Ocultar imagem
+
+Clique em "Mostrar/Esconder" → imagem aparece ou desaparece.
+
+Contador com botões + e -
+
+Dois botões controlam um número na tela.
+
+Mudar estilos (modo claro/escuro)
+
+Clique em um botão → troca entre dois temas (light/dark).
+
+🟡 Bloco 2: Interação com Inputs (Intermediário)
+Aqui você começa a capturar dados e manipular o DOM de forma dinâmica.
+
+Adicionar item a uma lista
+
+Campo + botão → adiciona <li> com o texto do campo.
+
+Remover item da lista por nome
+
+Campo + botão "remover" → remove item da <ul> com texto correspondente.
+
+Validação de formulário
+
+Checa se campos estão vazios e dá feedback visual.
+
+Formulário com mensagem de sucesso e limpeza de campos
+
+Mostra "Formulário enviado com sucesso!" se tudo estiver certo.
+
+Campo que mostra o número de caracteres restantes
+
+Ex: "140 caracteres restantes".
+
+🟠 Bloco 3: DOM Dinâmico (Avançado)
+Aqui você começa a criar e remover elementos dinamicamente, com mais lógica.
+
+Criar cards com informações
+
+Campo + botão → cria um card com título e descrição.
+
+To-do list com check e deletar
+
+Cada item pode ser marcado como feito e excluído.
+
+Menu dropdown customizado
+
+Clique mostra/esconde opções; clique fora fecha.
+
+Sistema de tabs
+
+Clique em uma aba → mostra conteúdo correspondente.
+
+Galeria de imagens com botão “Próxima” e “Anterior”
+
+Avança/volta nas imagens com JS.
+
+🔴 Bloco 4: Projetos desafiadores (Domínio Total)
+Esses são miniprojetos que combinam tudo e testam sua criatividade e domínio real do DOM.
+
+Escalação de time (já conversamos sobre ele!)
+
+Calculadora básica
+
+Campos de número + operação → mostra resultado.
+
+Cronômetro com iniciar/parar/zerar
+
+Usa setInterval, manipula DOM ao vivo.
+
+Simulador de posts (tipo rede social)
+
+Campo de texto + botão "Postar" → cria post na timeline.
+
+Gerador de perguntas e respostas (quiz)
+
+Botões com alternativas, mostra resposta correta e pontuação.
+
+💡 Bônus: DOM + Eventos Avançados
+Arrastar e soltar (drag and drop)
+
+Detectar teclas pressionadas (keydown/keyup)
+
+Eventos de foco e blur para inputs
+
+Tooltip ao passar o mouse
+
+Modal que abre/fecha com botão ou tecla ESC
