@@ -106,6 +106,7 @@ form.addEventListener('submit', (ev) => {
     const techName = document.querySelector(
       '#' + row.id + ' input[name="techName"]'
     ).value;
+    console.log('#' + row.id + ' input[name="techName"]');
     const techexp = document.querySelector(
       '#' + row.id + ' input[type="radio"]:checked'
     ).value;
